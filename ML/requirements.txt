@@ -1,0 +1,13 @@
+# requirements.txt
+
+# These packages are installed AFTER Unsloth to ensure compatibility
+# or to add functionalities not included in the base Unsloth installation.
+
+transformers<4.54
+timm
+datasets>=2.16.0
+trl>=0.8.6
+peft>=0.11.0
+pandas
+wandb
+evaluate

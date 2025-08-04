@@ -1,0 +1,48 @@
+# Dockerfile.convert for GGUF Conversion
+
+# This Dockerfile creates a minimal environment specifically for compiling
+# llama.cpp and using its tools. It uses a slim Python base image to keep
+# the final image size small.
+
+# ==============================================================================
+# STAGE 1: BASE IMAGE & SYSTEM DEPENDENCIES
+# ==============================================================================
+# Use a slim Python image as it contains the bare essentials.
+FROM python:3.11-slim
+
+# Install dependencies required to build llama.cpp from source.
+# git (to clone the repo), build-essential and cmake (for compilation).
+# libcurl4-openssl-dev is added to satisfy a new dependency in recent
+# versions of llama.cpp, making the build reproducible.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    git \
+    build-essential \
+    cmake \
+    libcurl4-openssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# ==============================================================================
+# STAGE 2: BUILD LLAMA.CPP
+# ==============================================================================
+WORKDIR /app
+
+# Clone the llama.cpp repository.
+RUN git clone https://github.com/ggerganov/llama.cpp.git
+
+# Install Python requirements needed by the llama.cpp conversion scripts.
+RUN python3 -m pip install --no-cache-dir -r llama.cpp/requirements.txt
+
+# Compile llama.cpp using CMake. This creates the necessary binaries
+# like 'llama-quantize' in the 'llama.cpp/build/bin' directory.
+RUN cd llama.cpp && \
+    mkdir build && \
+    cd build && \
+    cmake .. && \
+    cmake --build . --config Release
+
+# ==============================================================================
+# STAGE 3: DEFAULT COMMAND
+# ==============================================================================
+# Provide a bash shell by default. The actual command for running the script
+# will be provided during the 'docker run' command.
+CMD ["/bin/bash"]
