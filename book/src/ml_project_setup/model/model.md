@@ -1,0 +1,2 @@
+<h1>Original Model & Tooling Overview</h1>
+<p>A successful fine-tuning project begins with a deliberate selection of the base model and a robust set of supporting tools. Our choices were guided by a commitment to performance, efficiency, and deployment accessibility.</p>

@@ -1,0 +1,4 @@
+<h2>Data Curation and Preprocessing</h2>
+
+<p>The model's expertise is derived from a custom-curated dataset, <code>data/emergency_dataset.jsonl</code>. Each entry is a JSON object containing an <code>instruction</code> (an emergency-related question) and a high-quality <code>output</code> (a safe, step-by-step answer).</p>
+<p>Before training, this data is formatted using the <code>format_chat_template</code> function in <code>train_pipeline.py</code>. This function applies the model's official chat template, structuring the data into the conversational format (<code>&lt;start_of_turn&gt;user...&lt;end_of_turn&gt;...</code>) that the instruction-tuned base model was trained on. This alignment is critical for effective learning.</p>

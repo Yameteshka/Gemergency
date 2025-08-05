@@ -1,0 +1,2 @@
+<h1>Results Comparison & Final Model Selection</h1>
+<p>Evaluation is critical to ensure our fine-tuned model is not only more helpful but, most importantly, <b>safer</b> than the base model. We employed a multi-faceted evaluation strategy, culminating in a rigorous safety assessment of deployable GGUF models.</p>
