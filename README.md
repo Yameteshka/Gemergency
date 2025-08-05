@@ -42,8 +42,8 @@ In this documentation, you will find information about the model training proces
 
 To explore the project setup process, choose one of the following:
 
-- Open the [Gemergency iOS app guide book](#) <!-- add link later -->
-- Browse the [book directory](#) if you prefer not to use the guidebook <!-- add link later -->
+- Open the [Gemergency iOS app guide book](https://charming-whaley.github.io/gemergency_ios_app_code/) 
+- Browse the [book directory](https://github.com/charming-whaley/gemergency_ios_app_code/blob/main/book/src/SUMMARY.md) if you prefer not to use the guidebook
 
 ---
 
