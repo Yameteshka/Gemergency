@@ -181,7 +181,7 @@ For this project, where user safety in an emergency is the absolute highest prio
 
 For a live, step-by-step walkthrough of the entire project pipeline without needing to set up Docker, please see our demonstration notebook:
 
-**[➡️ `demo.ipynb`](./demo.ipynb)**
+**[➡️ `demo.ipynb`](https://github.com/Yameteshka/Gemergency/tree/main/ML/notebooks)**
 
 ### The Purpose of This Notebook
 
