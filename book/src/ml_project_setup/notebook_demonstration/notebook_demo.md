@@ -1,6 +1,6 @@
 <h1>💻 Interactive Demonstration Notebook</h1>
 <p>For a live, step-by-step walkthrough of the entire project pipeline without needing to set up Docker, please see our demonstration notebook:</p>
-<a href="./demo.ipynb">➡️ <code>demo.ipynb</code></a>
+<a href="https://github.com/Yameteshka/Gemergency/tree/main/ML/notebooks">➡️ <code>demo.ipynb</code></a>
 <h1>The Purpose of This Notebook</h1>
 <p>This notebook is a <b>mock demonstration of the project pipeline</b>, created specifically for presentation and review purposes.</p>
 <p>It does <b>not reproduce the full codebase or perform real computations</b> — instead, it walks the reader through the key stages of the project (data preparation, training, merging, quantization, inference) using simplified logic, placeholder data, and printed outputs.</p>
