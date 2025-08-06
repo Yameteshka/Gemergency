@@ -1,0 +1,5 @@
+[book]
+authors = ["Katkov Fedor", "Julia Kurnaeva"]
+language = "en"
+src = "src"
+title = "Gemergency iOS app docs"

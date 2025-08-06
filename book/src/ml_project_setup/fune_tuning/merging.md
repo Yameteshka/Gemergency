@@ -1,0 +1,2 @@
+<h2>Model Merging</h2>
+<p>After training, the LoRA adapters are saved as a separate file. The <code>run_model_merge</code> function in <code>train_pipeline.py</code> performs the final step: it loads the base model in its original precision (<code>bfloat16</code>) and merges the trained adapter weights into it. The result is a single, standalone fine-tuned model that can be deployed without requiring the PEFT library.</p>
